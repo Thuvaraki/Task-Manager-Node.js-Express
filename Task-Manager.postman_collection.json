@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "05fc1a4e-d565-4c7b-b2d6-ded064459b95",
+		"name": "Task-Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31969805"
+	},
+	"item": [
+		{
+			"name": "Get All Tasks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/tasks",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create tasks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Prepare presentation\",\r\n    \"completed\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/tasks",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Task",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/tasks/65b5b5943806a17c90d11e33",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tasks",
+						"65b5b5943806a17c90d11e33"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Keerthikan\",\r\n    \"completed\" : true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/tasks/65b4c80ae5e1f7563fd913e5",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tasks",
+						"65b4c80ae5e1f7563fd913e5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/tasks/65b4ca9f765557ff7d5c6715",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"tasks",
+						"65b4ca9f765557ff7d5c6715"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
